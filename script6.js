@@ -6,7 +6,7 @@ CGU ou CGC ou CGA ou CGG ou AGA ou AGG => Arginine
 UAU ou UAC => Tyrosine */
 
 function codons_to_acids(str) {
-  let codons = str.match(/[\s\S]{1,3}/g);
+  let codons = str.match(/[\s\S]{1,3}/g); // découpe le string en array de 3 characters
   let mapped = codons.map(codon => {
     if(codon === 'UCU' || codon === 'UCC' || codon === 'UCA' ||codon === 'UCG' ||codon === 'AGU' || codon === 'AGC')
     return "Sérine";
